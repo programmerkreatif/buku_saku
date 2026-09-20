@@ -1,22 +1,10 @@
-import express from "express";
+import dotenv from "dotenv";
+import app from "./app.js";
 
-const app = express();
+dotenv.config();
 
-const PORT = 9000;
-
-app.use(express.json());
-
-app.get("/api/hello", (req, res) => {  
-    res.json({
-    	success:true,
-	message:"Hello, world nodejs exploration"
-    });
-});
-
+const PORT = Number(process.env.PORT) || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Listening port:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
-
-
-export default app;

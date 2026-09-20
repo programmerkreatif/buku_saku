@@ -1,3 +1,6 @@
+import { RowDataPacket } from "mysql2";
+
+
 export type UserRole = 'admin' | 'user';
 
 export interface User {
@@ -15,4 +18,12 @@ export interface NewUser {
   email: string;
   password: string;
   role: UserRole;
+}
+
+export interface UserRow extends RowDataPacket {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+    role: "admin" | "user";
 }

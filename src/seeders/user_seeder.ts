@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
 import { db } from '../config/database'; // ← sesuaikan path
-import { NewUser } from '../types/user';
+import { NewUser } from '../types/user.types';
 
 const ADMIN = {
   name: 'Administrator Keuanganku',

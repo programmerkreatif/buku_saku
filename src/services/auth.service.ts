@@ -9,13 +9,8 @@ import {
     JwtPayload
 } from "../types/auth.types.js";
 
-interface UserRow extends RowDataPacket {
-    id: number;
-    name: string;
-    email: string;
-    password: string;
-    role: "admin" | "user";
-}
+import { UserRow } from "../types/user.types.js";
+
 
 export const register = async (
     data: RegisterRequest

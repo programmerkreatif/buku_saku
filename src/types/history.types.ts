@@ -1,5 +1,19 @@
 import { RowDataPacket } from "mysql2";
 
+
+export interface HistoryRequest {
+    year: number;
+    month: number;
+}
+
+export interface History {
+    id: number;
+    nominal: string; //decimal
+    description: string;
+    rekening_id: number;
+}
+
+
 export interface HistoryRow extends RowDataPacket {
     id: number;
     nominal: string; //decimal
